@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Image Slider</title>
+<link rel="stylesheet" href="hospital2.css">
+<script src="https://kit.fontawesome.com/accbd2d454.js" crossorigin="anonymous"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>  
+</head>
+<body>
+<div class="navbara">
+  <div class="logo">
+    <img src="https://i.pinimg.com/originals/85/95/f4/8595f4b711e503bc72fe396e5043e0c2.png" alt="Logo">
+  </div>
+  <div class="nava">
+    <li><a href=""><i class="fa-solid fa-hospital"></i> About us</a></li>
+    <li><a href="login.html"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
+    <li><a href="signin.html"><i class="fa-regular fa-calendar-check"></i> Appointment</a></li>
+    <li><a href="login.html"><i class="fa-regular fa-clock"></i> Schedule</a></li>
+    <li><a href="login.html"><i class="fa-solid fa-address-card"></i> Login</a></li>
+  </div>
+</div>
+
+<div class="hero-section">
+  <main>
+    <ul class="slider">
+      <li class="item" style="background-image: url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+        <div class="content">
+          <h2 class="title">"24/7 Faculty"</h2>
+          <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.</p>
+          <button class="hero-btn">Fill Out Form</button>
+        </div>
+      </li>
+      <li class="item" style="background-image: url('https://images.pexels.com/photos/6129237/pexels-photo-6129237.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')">
+        <div class="content">
+          <h2 class="title">"Where Care Meets Expertise"</h2>
+          <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing el 514305it. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.</p>
+          <button class="hero-btn">Need Urgent Care</button>
+        </div>
+      </li>
+      <li class="item" style="background-image: url('https://images.pexels.com/photos/6129049/pexels-photo-6129049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')">
+        <div class="content">
+          <h2 class="title">"Estrange Bond"</h2>
+          <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.</p>
+          <button class="hero-btn">Check Reports</button>
+        </div>
+      </li>
+      <li class="item" style="background-image: url('https://images.pexels.com/photos/4032060/pexels-photo-4032060.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')">
+        <div class="content">
+          <h2 class="title">"Our State-of-the Laboratory"</h2>
+          <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.</p>
+          <button class="hero-btn">Verify Medicine</button>
+        </div>
+      </li>
+      <li class="item" style="background-image: url('https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')">
+        <div class="content">
+          <h2 class="title">"Emergency Excellence"</h2>
+          <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.</p>
+          <button class="hero-btn">Emergency Case</button>
+        </div>
+      </li>
+    </ul>
+    <nav class="nav btntop">
+      <ion-icon class="btn prev" name="arrow-back-outline"></ion-icon>
+      <ion-icon class="btn next" name="arrow-forward-outline"></ion-icon>
+    </nav>
+  </main>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const slider = document.querySelector('.slider');
+
+  function activate(e) {
+    const items = document.querySelectorAll('.item');
+    if (e.target.matches('.next')) {
+      slider.append(items[0]);
+    }
+    if (e.target.matches('.prev')) {
+      slider.prepend(items[items.length - 1]);
+    }
+  }
+
+  document.addEventListener('click', activate, false);
+});
+</script>
+</body>
+</html>

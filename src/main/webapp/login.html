@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="login.css">
+</head>
+<body>
+<div class="forum">
+  <div class="logincard">
+    <form action="login" method="post">
+     <img src="https://cdn-icons-png.flaticon.com/512/295/295128.png" alt="">
+      <input type="text"  name="username" placeholder="username" required>
+      <input type="text" name="password" placeholder="password" required>
+        <select id="branch" name="member" required>
+           <option value="1">Doctor</option>
+            <option value="2">Patient</option>
+            <option value="3">Nurse</option>
+        </select>
+        <input type="text"  name="hid" placeholder="Hospital id">
+       <br/>
+     <div class="btn-section"> <button>Submit</button> <button ><a href='signin.html'>Register now</a><button ><a href='hospital.html'>Exit</a></button></div>
+    </form>
+   
+  </div>
+</body>
+ <script src="login.js"></script>
+   <script>
+        window.onload = function() {
+            alert("Please log in with your username and password.");
+        };
+    </script>
+</html>
